@@ -4,17 +4,14 @@ class QuizBrain:
         self.list = qlist
         self.score = 0
 
+    def more_questions(self):
+        return self.number <= len(self.list)
+
     def next_question(self):
         current_q = self.list[self.number]
         self.number += 1
-        user_ans = input(f"Q{self.number}: {current_q.text} (True/False) ")
+        user_ans = input(f"Q.{self.number}: {current_q.text} (True/False) ")
         self.check_ans(user_ans, current_q.answer)
-
-    def more_questions(self):
-        if self.number == len(self.list):
-            return False
-        else:
-            return True
 
     def check_ans(self, user_ans, correct_ans):
         if user_ans.lower() == correct_ans.lower():
@@ -23,4 +20,4 @@ class QuizBrain:
         else:
             print("Incorrect.")
         print(f"The correct answer is {correct_ans}.")
-        print(f"Current Score: {self.score}/{self.number}")
+        print(f"Current Score: {self.score}/{self.number}\n")
