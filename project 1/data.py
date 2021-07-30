@@ -196,4 +196,3 @@ question_data = [
      "question": "&quot;Resident Evil 7&quot; is the first first-person Resident Evil game.",
      "correct_answer": "False", "incorrect_answers": ["True"]}
 ]
-
