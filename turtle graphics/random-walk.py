@@ -8,7 +8,7 @@ toe = t.Turtle()
 def rand_colour():
     red = randint(0, 255)
     green = randint(0, 255)
-    blue = randint (0, 255)
+    blue = randint(0, 255)
     rgb = (red, green, blue)
     return rgb
 
