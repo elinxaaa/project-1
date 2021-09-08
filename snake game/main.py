@@ -29,7 +29,7 @@ while game_run:
     time.sleep(0.1)
     snake.move()
 
-    if snake.head.distance(food) < 15:
-        print("nom")
+    if snake.head.distance(food) < 17:
+        food.refresh()
 
 screen.exitonclick()
